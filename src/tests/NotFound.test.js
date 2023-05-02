@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react';
 import NotFound from '../pages/NotFound';
 import renderWithRouter from '../renderWithRouter';
 
-describe('Testes FavoritePokemon', () => {
+describe('Testes NotFound', () => {
   it('Teste se a página contém um heading h2 com o texto Page requested not found', () => {
     renderWithRouter(<NotFound />);
 
@@ -12,7 +12,7 @@ describe('Testes FavoritePokemon', () => {
     expect(notFoundMsg).toBeInTheDocument();
   });
 
-  it('', () => {
+  it('Teste se a página mostra a imagem https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif', () => {
     renderWithRouter(<NotFound />);
 
     const notFoundImg = screen.getByRole('img', { name: /pikachu crying because the page requested was not found/i });
